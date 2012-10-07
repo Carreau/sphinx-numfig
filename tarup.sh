@@ -3,7 +3,7 @@
 # $Id$
 #
 ver=`svnversion -c . | sed -e 's/^.*://'`
-nfdir=numfig-r$ver
+nfdir=sphinx_numfig-r$ver
 cmd="mkdir -p $nfdir"
 echo $cmd
 $cmd
