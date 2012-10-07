@@ -119,7 +119,7 @@ def setup(app):
 
 # Are these used?
   app.add_config_value('numfig_number_figures', True, True)
-  app.add_config_value('numfig_numfig_figure_caption_prefix', "Figure", True)
+  app.add_config_value('numfig_figure_caption_prefix', "Figure", True)
 
   app.add_node(page_ref,
     text=(skip_page_ref, None),
