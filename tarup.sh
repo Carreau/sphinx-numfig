@@ -8,6 +8,8 @@ cmd="mkdir -p $nfdir"
 echo $cmd
 $cmd
 cp numfig.py install.sh $nfdir
-tar czf $nfdir.tgz $nfdir
+cmd="tar czf $nfdir.tgz $nfdir"
+echo $cmd
+$cmd
 rm -rf $nfdir
 
