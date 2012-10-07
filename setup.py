@@ -8,6 +8,16 @@ except:
   print "Sphinx not found.  Quitting."
   sys.exit(1)
 
+print sys.argv[1]
+if sys.argv[1] == "build":
+  print "Nothing to build.  Quitting."
+  sys.exit(0)
+elif sys.argv[1] == "install":
+  pass
+else:
+  print sys.argv[1], "action not known.  Quitting."
+  sys.exit(1)
+
 # Remove the old installation
 sphinxextdir = os.path.dirname(sphinx.__file__)
 dst = os.path.join(sphinxextdir, "numfig.py")
@@ -23,6 +33,7 @@ except:
 
 # Assume we are in my directory
 import shutil
+print "Copying numfig.py to", dst
 shutil.copyfile("numfig.py", dst)
 
 # Compile to bytecode
