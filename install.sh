@@ -1,5 +1,10 @@
 #!/bin/bash
 
-PYSITEPKGS_DIR=${PYSITEPKGS_DIR:-"/contrib/lib/python2.6/site-packages"}
-SPHINX_EXT_DIR=
-cp numfig.py $PYSITEPKGS_DIR/Sphinx-1.1.3-py2.6.egg/sphinx/ext
+sphinxinit=`python -c "import sphinx; print sphinx.__file__"`
+if test -z "$sphinxinit"; then
+  echo "Sphinx not found.  Quitting."
+  exit 1
+fi
+sphinxextdir=`dirname $sphinxinit`/ext
+cp numfig.py $sphinxextdir
+
