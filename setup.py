@@ -19,31 +19,32 @@ else:
   sys.exit(1)
 
 # Remove the old installation
+import shutil
+import py_compile
 sphinxdir = os.path.dirname(sphinx.__file__)
-olddst = os.path.join(sphinxdir, "numfig.py")
-olddstc = os.path.join(sphinxdir, "numfig.pyc")
-sphinxextdir = os.path.join(sphinxdir, "ext")
-dst = os.path.join(sphinxextdir, "numfig.py")
-dstc = os.path.join(sphinxextdir, "numfig.pyc")
-for f in [dst, olddst, dstc, olddstc]:
-  try:
-    os.remove(f)
-  except:
-    pass
+for abfile in "numfig.py", "numimg.py":
+  olddst = os.path.join(sphinxdir, abfile)
+  olddstc = os.path.join(sphinxdir, abfile + "c")
+  sphinxextdir = os.path.join(sphinxdir, "ext")
+  dst = os.path.join(sphinxextdir, abfile)
+  dstc = os.path.join(sphinxextdir, abfile + "c")
+  for f in [dst, olddst, dstc, olddstc]:
+    try:
+      os.remove(f)
+    except:
+      pass
 
 # Assume we are in my directory
-import shutil
-print "Copying numfig.py to", dst
-shutil.copyfile("numfig.py", dst)
+  print "Copying " + abfile + " to", dst
+  shutil.copyfile(abfile, dst)
 
 # Compile to bytecode
-import py_compile
-print "Compiling", dst, "to bytecode."
-py_compile.compile(dst)
+  print "Compiling", dst, "to bytecode."
+  py_compile.compile(dst)
 
 # Fix perms
-mode = stat.S_IRUSR | stat.S_IWUSR | stat.S_IRGRP | stat.S_IWGRP | stat.S_IROTH
-print "Setting mode of", dst, "to 664."
-os.chmod(dst, mode)
-os.chmod(dstc, mode)
+  mode = stat.S_IRUSR | stat.S_IWUSR | stat.S_IRGRP | stat.S_IWGRP | stat.S_IROTH
+  print "Setting mode of", dst, "to 664."
+  os.chmod(dst, mode)
+  os.chmod(dstc, mode)
 
