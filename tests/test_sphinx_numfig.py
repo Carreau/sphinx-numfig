@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-test_sphinx-numfig
+test_sphinx_numfig
 ----------------------------------
 
 Tests for `sphinx-numfig` module.

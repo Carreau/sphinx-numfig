@@ -21,7 +21,7 @@ test_requirements = [
 
 setup(
     name='sphinx_numfig',
-    version='0.1.0',
+    version='0.1.1',
     description='Python Boilerplate contains all the boilerplate you need to create a Python package.',
     long_description=readme + '\n\n' + history,
     author='Matthias Bussonnier',
