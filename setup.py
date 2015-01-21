@@ -20,23 +20,23 @@ test_requirements = [
 ]
 
 setup(
-    name='sphinx-numfig',
+    name='sphinx_numfig',
     version='0.1.0',
     description='Python Boilerplate contains all the boilerplate you need to create a Python package.',
     long_description=readme + '\n\n' + history,
     author='Matthias Bussonnier',
     author_email='bussonniermatthias@gmail.com',
-    url='https://github.com/Carreau/sphinx-numfig',
+    url='https://github.com/Carreau/sphinx_numfig',
     packages=[
-        'sphinx-numfig',
+        'sphinx_numfig',
     ],
-    package_dir={'sphinx-numfig':
-                 'sphinx-numfig'},
+    package_dir={'sphinx_numfig':
+                 'sphinx_numfig'},
     include_package_data=True,
     install_requires=requirements,
     license="BSD",
     zip_safe=False,
-    keywords='sphinx-numfig',
+    keywords='sphinx_numfig',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
