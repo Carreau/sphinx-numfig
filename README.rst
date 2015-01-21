@@ -1,12 +1,13 @@
-This is just sphinx numfig as you could find there:
+===============================
+sphinx-numfig
+===============================
 
-http://sourceforge.net/p/numfig/wiki/Home/
+.. image:: https://travis-ci.org/Carreau/sphinx-numfig.png?branch=master
+        :target: https://travis-ci.org/Carreau/sphinx-numfig
 
-history imported from svn, into git.
+.. image:: https://pypip.in/d/sphinx-numfig/badge.png
+        :target: https://pypi.python.org/pypi/sphinx-numfig
 
-I was just bored of searching it everytime on googlem so now it's on pip. 
-
-If you are not happy because you wrote it or want to contribute, just mail me 
-I'll make you owner as well. 
-
+Just http://sourceforge.net/p/numfig/wiki/Home/ repackaged and put on PyPi cause I was bored of
+google this package. 
 
