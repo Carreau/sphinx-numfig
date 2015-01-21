@@ -5,15 +5,15 @@
 test_sphinx_numfig
 ----------------------------------
 
-Tests for `sphinx-numfig` module.
+Tests for `sphinx_numfig` module.
 """
 
 import unittest
 
-from sphinx-numfig import sphinx-numfig
+from sphinx_numfig import sphinx_numfig
 
 
-class TestSphinx-numfig(unittest.TestCase):
+class TestSphinx_numfig(unittest.TestCase):
 
     def setUp(self):
         pass
